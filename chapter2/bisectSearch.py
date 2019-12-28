@@ -13,6 +13,7 @@ def demo(bisect_fn):
         offset = position * '  |'
         print(ROW_FWT.format(needle, position, offset))
 
+
 if __name__ == '__main__':
     if sys.argv[-1] == 'left':
         bisect_fn = bisect.bisect_left
