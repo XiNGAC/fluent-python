@@ -13,7 +13,8 @@ class Vector:
         return hypot(self.x, self.y)
 
     def __bool__(self):
-        return bool(abs(self))
+        # return bool(abs(self))
+        return bool(self.x or self.y)
 
     def __add__(self, other):
         x = self.x + other.x
@@ -22,3 +23,6 @@ class Vector:
 
     def __mul__(self, scalar):
         return Vector(self.x * scalar, self.y * scalar)
+
+a = Vector(0,0)
+print(bool(a))
